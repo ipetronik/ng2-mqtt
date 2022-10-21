@@ -931,7 +931,7 @@ Paho.MQTT = (function (global) {
 		if (!this.socket)
 			throw new Error(format(ERROR.INVALID_STATE, ["not connecting or connected"]));
 		
-		wireMessage = new WireMessage(MESSAGE_TYPE.DISCONNECT);
+		var wireMessage = new WireMessage(MESSAGE_TYPE.DISCONNECT);
 
 		// Run the disconnected call back as soon as the message has been sent,
 		// in case of a failure later on in the disconnect processing.
